@@ -28,4 +28,4 @@ NewItemForm.propTypes = {
   onNewItemCreation: PropTypes.func
 };
 
-export default NewItemForm;
+export default NewItemForm; 
