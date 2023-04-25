@@ -14,8 +14,15 @@ class ItemControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
+      mainItemList: [],
       selectedItem: null,
       editing: false
     };
     // this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleAddingNewItemToList = (newItem) => {
+    const newMainItemList = this.state.mainItemList.concat(newItem);
+    this.setState({mainItemList: newMainItemList,
+                  formVisibleOnPage: false });
   }
