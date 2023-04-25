@@ -1,4 +1,4 @@
-# Pierre's Sweet And Savory Treats
+# The Coffee Cafe
 
 #### By: Jannon Sielaff
 
@@ -6,27 +6,20 @@ An application with user authentication and a many-to-many database relationship
 
 ## Technologies Used
 
-* C#
+* JavaScript
 * HTML
 * CSS
 * Visual Studio
-* .Net Framework
-* Razor Markup
-* SQL
+* React
+* JSX
+* Node.js
 
 ## Setup Instructions
 
 1. Clone this repository.
-2. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "PierresTreats.Solution/PierresTreats".
-3. Create a file in /PierresTreats called appsettings.json.  In this file, place the following text:
-
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=[your database name];uid=[your user ID];pwd=[Your password];"
-  }
-}
-
-4. In the command line, run the command "dotnet build" to compile the code. After you have compiled the code and injected all of your dependencies, you can publish the application to the internet by typing dotnet watch run.  This will open a web browser to LocalHost:5000 or Localhost:5001.  From here you can interact with the application. Since this is a web application, you will interact with it in your web browser.
+2. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "/react-inventory-tracker/".
+3. In your terminal or GitBash, type npm install to install whatever dependencies you may need to install.
+4. Then type npm run start - this will start the program.  If it doesn't open on its own, you can open a web browser and navigate to http://localhost:3000/ and the site will be rendered there.
 
 
 ## Known Bugs
@@ -59,11 +52,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -84,32 +72,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
