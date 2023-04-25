@@ -89,5 +89,12 @@ class ItemControl extends React.Component {
       currentlyVisibleState = <ItemList itemList={this.props.mainItemList} onItemSelection={this.handleChangingSelectedItem} />;
       buttonText = "Add Item";
     }
+    return (
+      <React.Fragment>
+        {currentlyVisibleState}
+        <button onClick={this.handleClick}>{buttonText}</button>
+      </React.Fragment>
+    );
+  }
 
 }
