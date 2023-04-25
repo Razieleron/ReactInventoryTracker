@@ -27,6 +27,16 @@ class ItemControl extends React.Component {
                   formVisibleOnPage: false });
   }
 
+  handleEditingItemInList = (itemToEdit) => {
+    const editedMainItemList = this.state.mainItemList
+      .filter(item => item.id !== this.state.selectedItem.id)
+      .concat(itemToEdit);
+    this.setState({
+        mainItemList: editedMainItemList,
+        editing: false,
+        selectedTicket: null
+      });
+  }
 
   handleChangingSelectedItem = (id) => {
     const selectedItem = this.props.mainItemList[id];
