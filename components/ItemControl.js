@@ -98,3 +98,7 @@ class ItemControl extends React.Component {
   }
 
 }
+
+ItemControl.propTypes = {
+  mainItemList: PropTypes.object
+};
