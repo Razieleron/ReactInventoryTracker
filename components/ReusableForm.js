@@ -13,3 +13,18 @@ function ReusableForm(props) {
           type='text'
           name='origin'
           placeholder='Origin of Blend' />
+        <textarea
+          name='description'
+          placeholder='Describe the Blend.' />
+        <button type='submit'>{props.buttonText}</button>
+      </form>
+    </React.Fragment>
+  );
+}
+
+ReusableForm.propTypes = {
+  formSubmissionHandler: PropTypes.func,
+  buttonText: PropTypes.string
+};
+
+export default ReusableForm;
