@@ -7,7 +7,7 @@ function ItemList(props){
   return (
     <React.Fragment>
       <hr />
-      {Object.values(props.itemList).map((item) =>
+      {props.ticketList.map((ticket) =>
         <Item
           whenItemClicked = { props.onItemSelection }
           names={item.names}

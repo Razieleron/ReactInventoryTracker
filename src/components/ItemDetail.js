@@ -10,7 +10,7 @@ function ItemDetail(props){
       <h3>{item.origin} - {item.names}</h3>
       <p><em>{item.description}</em></p>
       <button onClick={ props.onClickingEdit }>Update Item</button>
-      <button onClick={()=> onClickingDelete(ticket.id) }>Close Item</button>
+      <button onClick={()=> onClickingDelete(item.id) }>Close Item</button>
       <hr/>
     </React.Fragment>
   );
