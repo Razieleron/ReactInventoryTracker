@@ -7,8 +7,8 @@ function ItemDetail(props){
   return (
     <React.Fragment>
       <h1>Item Detail</h1>
-      <h3>{item.origin} - {ticket.names}</h3>
-      <p><em>{ticket.description}</em></p>
+      <h3>{item.origin} - {item.names}</h3>
+      <p><em>{item.description}</em></p>
       <button onClick={ props.onClickingEdit }>Update Item</button>
       <button onClick={()=> onClickingDelete(ticket.id) }>Close Item</button>
       <hr/>
