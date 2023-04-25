@@ -68,4 +68,11 @@ class ItemControl extends React.Component {
     console.log("handleEditClick reached!");
     this.setState({editing: true});
   }
+
+  render(){
+    let currentlyVisibleState = null;
+    let buttonText = null;
+    if (this.state.editing ) {      
+      currentlyVisibleState = <EditItemForm item = {this.state.selectedItem} onEditItem = {this.handleEditingItemInList} />
+      buttonText = "Return to Item List";
 }
