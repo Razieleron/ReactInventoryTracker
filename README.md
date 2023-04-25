@@ -14,7 +14,7 @@ An application with user authentication and a many-to-many database relationship
 * JSX
 * Node.js
 
-## Setup Instructions
+## Setup Instructions 
 
 1. Clone this repository.
 2. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "/react-inventory-tracker/".
