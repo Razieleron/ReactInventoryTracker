@@ -14,7 +14,8 @@ function ItemList(props){
           origin={item.origin}
           description={item.description}
           id={item.id}
-          key={item.id}/>
+          key={item.id}
+          />
       )}
     </React.Fragment>
   );
@@ -22,8 +23,8 @@ function ItemList(props){
 
 
 ItemList.propTypes = {
-  itemList: PropTypes.object,
+  itemList: PropTypes.array,
   onItemSelection: PropTypes.func
 };
 
-export default ItemList;
+export default ItemList; 
