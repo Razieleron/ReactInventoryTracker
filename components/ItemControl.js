@@ -26,3 +26,9 @@ class ItemControl extends React.Component {
     this.setState({mainItemList: newMainItemList,
                   formVisibleOnPage: false });
   }
+
+
+  handleChangingSelectedItem = (id) => {
+    const selectedItem = this.props.mainItemList[id];
+    this.setState({selectedItem: selectedItem});
+  }
