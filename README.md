@@ -22,6 +22,8 @@ An application with user authentication and a many-to-many database relationship
 4. Then type npm run start - this will start the program.  If it doesn't open on its own, you can open a web browser and navigate to http://localhost:3000/ and the site will be rendered there.
 
 
+![Component Diagram](ComponentDiagram.png)
+
 ## Known Bugs
 
 * NA
