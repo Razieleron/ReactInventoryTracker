@@ -9,3 +9,19 @@ function EditItemForm(props){
     event.preventDefault();
     props.onEditItem({names: event.target.names.value, origin: event.target.origin.value, description: event.target.description.value, id: item.id});
   }
+
+  return (
+    <React.Fragment>
+      <ReusableForm 
+        formSubmissionHandler={handleEditItemFormSubmission} /* new code */ 
+        buttonText="Update Item" />
+    </React.Fragment>
+  );
+}
+
+EditItemForm.propTypes = {
+  item: PropTypes.object,
+  onEditItem: PropTypes.func
+};
+
+export default EditItemForm;
