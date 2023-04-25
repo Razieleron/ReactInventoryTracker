@@ -26,7 +26,7 @@ An application with user authentication and a many-to-many database relationship
 
 * NA
 
-## License
+## License 
 
 MIT License
 
