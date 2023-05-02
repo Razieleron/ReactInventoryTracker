@@ -4,7 +4,6 @@ import ReusableForm from "./ReusableForm";
 import { v4 } from 'uuid';
 
 function NewItemForm(props){
-
   function handleNewItemFormSubmission(event) {
     event.preventDefault();
       props.onNewItemCreation({
@@ -19,7 +18,7 @@ function NewItemForm(props){
     <React.Fragment>
       <ReusableForm 
         formSubmissionHandler={handleNewItemFormSubmission}
-        buttonText="Help!" />
+        buttonText="Add new Item!" />
     </React.Fragment>
   );
 }

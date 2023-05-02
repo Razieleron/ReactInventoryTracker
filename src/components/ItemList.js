@@ -13,10 +13,10 @@ function ItemList(props){
           names={item.names}
           origin={item.origin}
           description={item.description}
+          amountOnHand={item.amountOnHand}
           id={item.id}
-          key={item.id}
-          />
-      )}
+          key={item.id}   
+          />)}
     </React.Fragment>
   );
 }
@@ -28,3 +28,4 @@ ItemList.propTypes = {
 };
 
 export default ItemList; 
+

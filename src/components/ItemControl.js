@@ -3,6 +3,7 @@ import NewItemForm from './NewItemForm';
 import ItemList from './ItemList';
 import ItemDetail from './ItemDetail';
 import EditItemForm from './EditItemForm';
+import { v4 } from 'uuid';
 
 import PropTypes from "prop-types";
 
@@ -14,7 +15,30 @@ class ItemControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      mainItemList: [],
+      mainItemList: [
+        {
+          names: "Arabica Blend",
+          origin: "Afghanistan",
+          description: "Earthy, with caramel and marshmallow notes",
+          amountOnHand: 10,
+          id: v4()
+        },
+        {
+          names: "Ethiopian Dark Roast",
+          origin: "Ethiopia",
+          description: "Chocolatey notes with a mild bitterness",
+          amountOnHand: 10,
+          id: v4()
+        },
+        {
+          names: "New Guinea Blonde",
+          origin: "New Guinea",
+          description: "Light and floral",
+          amountOnHand: 10,
+          id: v4()
+        }
+          
+      ],
       selectedItem: null,
       editing: false
     };
@@ -39,7 +63,8 @@ class ItemControl extends React.Component {
   }
 
   handleChangingSelectedItem = (id) => {
-    const selectedItem = this.props.mainItemList[id];
+    console.log(id)
+    const selectedItem = this.state.mainItemList.filter(item => item.id === id)[0];
     this.setState({selectedItem: selectedItem});
   }
 
@@ -64,6 +89,7 @@ class ItemControl extends React.Component {
       }));
     }
   }
+
   handleEditClick = () => {
     console.log("handleEditClick reached!");
     this.setState({editing: true});
@@ -75,7 +101,8 @@ class ItemControl extends React.Component {
     if (this.state.editing ) {      
       currentlyVisibleState = <EditItemForm item = {this.state.selectedItem} onEditItem = {this.handleEditingItemInList} />
       buttonText = "Return to Item List";
-    } else if (this.state.selectedItem != null) {
+    } else if (this.state.selectedItem !== null) {
+      console.log(this.state.selectedItem)
       currentlyVisibleState = 
       <ItemDetail 
           item = {this.state.selectedItem} 
@@ -86,7 +113,7 @@ class ItemControl extends React.Component {
       currentlyVisibleState = <NewItemForm onNewItemCreation={this.handleAddingNewItemToList} />
       buttonText = "Return to Item List";
     } else {
-      currentlyVisibleState = <ItemList itemList={this.props.mainItemList} onItemSelection={this.handleChangingSelectedItem} />;
+      currentlyVisibleState = <ItemList itemList={this.state.mainItemList} onItemSelection={this.handleChangingSelectedItem} />;
       buttonText = "Add Item";
     }
     return (

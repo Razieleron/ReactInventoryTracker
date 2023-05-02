@@ -7,6 +7,7 @@ function Item(props){
       <div onClick = {() => props.whenItemClicked(props.id)}>
       <h3>{props.origin} - {props.names}</h3>
       <p><em>{props.description}</em></p>
+      <p>{props.amountOnHand}</p>
       <hr/>
       </div>
     </React.Fragment>
@@ -17,6 +18,7 @@ Item.propTypes = {
   names: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
   description: PropTypes.string,
+  amountOnHand: PropTypes.number,
   id: PropTypes.string,
   whenItemClicked: PropTypes.func
 };
