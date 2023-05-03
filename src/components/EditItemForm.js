@@ -10,11 +10,21 @@ function EditItemForm(props){
       names: event.target.names.value, 
       origin: event.target.origin.value, 
       description: event.target.description.value, 
+      amountOnHand: parseInt(event.target.description.value), 
       id: item.id});
   }
 
   return (
     <React.Fragment>
+      <h1>Item Details</h1>
+      <h3>name: {item.names}</h3>
+      <h3>origin: {item.origin}</h3>
+      <h3>description: {item.description}</h3>
+      <h3>amount on hand: {item.amountOnHand}</h3>
+      <h3></h3>
+
+
+
       <ReusableForm 
         formSubmissionHandler={handleEditItemFormSubmission} 
         buttonText="Update Item" />

@@ -58,7 +58,7 @@ class ItemControl extends React.Component {
     this.setState({
         mainItemList: editedMainItemList,
         editing: false,
-        selectedTicket: null
+        selectedItem: null
       });
   }
 
@@ -74,6 +74,20 @@ class ItemControl extends React.Component {
       mainItemList: newMainItemList,
       selectedItem: null
     });
+  }
+
+  handleItemDecrement = (chosenItem) => {
+    console.log("handleDecrementClick reached!");
+    let selectedItem = this.state.selectedItem;
+    console.log(selectedItem.names)
+    if (selectedItem.amountOnHand > 0){
+      selectedItem.amountOnHand -= 1;
+    } else {
+      selectedItem.amountOnHand = 0;
+    }
+    let newMainItemList = this.state.mainItemList;
+    newMainItemList[this.state.mainItemList.indexOf(chosenItem)] = selectedItem;
+    this.setState({mainItemList: newMainItemList})
   }
 
   handleClick = () => {
@@ -101,17 +115,21 @@ class ItemControl extends React.Component {
     if (this.state.editing ) {      
       currentlyVisibleState = <EditItemForm item = {this.state.selectedItem} onEditItem = {this.handleEditingItemInList} />
       buttonText = "Return to Item List";
+    
     } else if (this.state.selectedItem !== null) {
       console.log(this.state.selectedItem)
       currentlyVisibleState = 
       <ItemDetail 
           item = {this.state.selectedItem} 
+          onClickingDecrement = {this.handleItemDecrement}
           onClickingDelete = {this.handleDeletingItem} 
           onClickingEdit = {this.handleEditClick} />
       buttonText = "Return to Item List";
+    
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewItemForm onNewItemCreation={this.handleAddingNewItemToList} />
       buttonText = "Return to Item List";
+    
     } else {
       currentlyVisibleState = <ItemList itemList={this.state.mainItemList} onItemSelection={this.handleChangingSelectedItem} />;
       buttonText = "Add Item";

@@ -8,7 +8,7 @@ function ReusableForm(props) {
         <input
           type='text'
           name='names'
-          placeholder='Pair Names' />
+          placeholder='Item Names' />
         <input
           type='text'
           name='origin'
